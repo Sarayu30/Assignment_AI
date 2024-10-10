@@ -69,5 +69,3 @@ cd webtoon-genre-classification
 - Pandas for data manipulation and analysis.
 
 ```
-
- 
