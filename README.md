@@ -1,5 +1,3 @@
- 
-```markdown
 # Webtoon Genre Classification
 
 ## Project Overview
@@ -44,28 +42,12 @@ The project implements a **Decision Tree Classifier** using the Scikit-learn lib
 4. **Model Training**: Trained a Decision Tree Classifier on the training data.
 5. **Model Evaluation**: Evaluated the model's performance using accuracy and classification reports.
 
- 
 ## Installation
 
 To run this project, ensure you have the following libraries installed:
 
 ```bash
 pip install pandas scikit-learn
-```
-
 ## Usage
-
-Clone the repository and run the notebook to see the classification results.
-
-```bash
 git clone https://github.com/yourusername/webtoon-genre-classification.git
 cd webtoon-genre-classification
-```
-
- 
-## Acknowledgements
-
-- Scikit-learn for machine learning algorithms and tools.
-- Pandas for data manipulation and analysis.
-
-```
