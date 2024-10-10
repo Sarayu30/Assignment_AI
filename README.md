@@ -1,53 +1,55 @@
-# Webtoon Genre Classification
+# Webtoon Genre Classification and Chatbot
 
 ## Project Overview
 
-This project aims to classify webtoon descriptions into predefined categories (genres) using machine learning techniques. The dataset contains various features related to different webtoons, and the goal is to predict their genres based on their descriptions and other attributes.
+This project focuses on classifying webtoon descriptions into predefined genres using machine learning techniques and developing a chatbot to answer user queries about specific webtoons. The notebook covers the dataset's features, classification approach, model improvement suggestions, and chatbot interaction examples.
 
-## Dataset
+## Key Components
 
-The dataset includes the following columns:
+### 1. Webtoon Dataset Description
+- The dataset includes the following columns:
+  - **title**: The name of the webtoon
+  - **item_id**: Unique identifier for the webtoon
+  - **link**: URL to the webtoon
+  - **cover**: Cover image URL
+  - **creators**: The creators of the webtoon
+  - **genres**: List of genres associated with the webtoon (multi-label)
+  - **views**: Number of views
+  - **subscribers**: Number of subscribers
+  - **likes**: Number of likes
+  - **banner**: Banner image URL
+  - **details**: Description of the webtoon
+  - **tags**: List of tags
+  - **episodes**: Number of episodes
+  - **released**: Release date
+  - **clean_details**: Cleaned description
+  - **clean_genres**: List of cleaned genres
+  - **target**: Predefined target genres for classification
 
-- **title**: The name of the webtoon
-- **item_id**: Unique identifier for the webtoon
-- **link**: URL to the webtoon
-- **cover**: Cover image URL
-- **creators**: The creators of the webtoon
-- **genres**: List of genres associated with the webtoon (multi-label)
-- **views**: Number of views
-- **subscribers**: Number of subscribers
-- **likes**: Number of likes
-- **banner**: Banner image URL
-- **details**: Description of the webtoon
-- **tags**: List of tags
-- **episodes**: Number of episodes
-- **released**: Release date
-- **clean_details**: Cleaned description
-- **clean_genres**: List of cleaned genres
-- **clean_tags**: List of cleaned tags
-- **combined_text**: Combined text for analysis
-- **features**: Additional features for classification
-- **combined_features**: Combined features for model input
-- **target**: Predefined target genres for classification
+### 2. Classification Approach
+- Initially, the first genre in the `clean_genres` column was used for classification.
+- The project considers transitioning to a more nuanced multi-label classification since webtoons can belong to multiple genres.
 
-## Model Implementation
+### 3. Model Improvement Suggestions
+1. **Data Augmentation**: Collect more webtoon descriptions to balance genres.
+2. **Multi-Label Classification**: Implement techniques to handle multi-label genres using Scikit-learn's `MultiLabelBinarizer`.
 
-The project implements a **Decision Tree Classifier** using the Scikit-learn library to classify webtoons into genres. 
+### 4. Detailed Steps
+- The notebook provides code for processing text data, preparing input features for the model, and suggestions for enhancing accuracy, particularly for the multi-label classification task.
 
-### Key Steps
+### 5. Chatbot Response Generation
+- The notebook outlines the development of a **chatbot** that can respond to user queries about a specific webtoon (Castle Swimmer). The chatbot uses **NLP techniques** to analyze the text and extract key information, including characters and themes.
 
-1. **Data Preparation**: Combined the `title` and `clean_details` as features. The target variable was defined based on the first genre in the `clean_genres` column.
-2. **Train-Test Split**: The dataset was split into training and testing sets.
-3. **Feature Extraction**: Utilized TF-IDF vectorization for feature extraction.
-4. **Model Training**: Trained a Decision Tree Classifier on the training data.
-5. **Model Evaluation**: Evaluated the model's performance using accuracy and classification reports.
+### 6. Example Interaction
+- Users can interact with the chatbot, asking for character details, the protagonist’s journey, or themes of the webtoon.
 
 ## Installation
 
 To run this project, ensure you have the following libraries installed:
 
 ```bash
-pip install pandas scikit-learn
+pip install pandas scikit-learn nltk
+
 ## Usage
-git clone https://github.com/yourusername/webtoon-genre-classification.git
+-git clone https://github.com/yourusername/webtoon-genre-classification.git
 cd webtoon-genre-classification
