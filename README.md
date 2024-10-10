@@ -52,4 +52,4 @@ pip install pandas scikit-learn nltk
 
 ## Usage
 -git clone https://github.com/yourusername/webtoon-genre-classification.git
-cd webtoon-genre-classification
+-cd webtoon-genre-classification
